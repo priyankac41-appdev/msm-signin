@@ -49,7 +49,7 @@ class MoviesController < ApplicationController
       the_movie.save
       redirect_to("/movies/#{the_movie.id}", { :notice => "Movie updated successfully."} )
     else
-      redirect_to("/movies/#{the_movie.id}", { :alert => the_movie.errors.full_messages.to_sentence })
+      redirect_to("/movies/#{the_movie.id}", { :alert => "Movie failed to update successfully." })
     end
   end
 
